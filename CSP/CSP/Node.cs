@@ -30,13 +30,25 @@ namespace CSP
             this.goal = goal;
         }
 
+        public Node(Node other)
+        {
+            goal = other.goal;
+            solution = new List<int>();
+            for(int i = 0; i < other.solution.Count; i++)
+                solution.Add(other.solution[i]);
+            domain = new List<int>();
+            for (int i = 0; i < other.domain.Count; i++)
+                domain.Add(other.domain[i]);
+
+        }
+
         #region FIBONACCI_PROBLEM
         public List<int> EstablishDomain(int n)
         {
             List<int> sequence = new List<int>();
-            int a = 0;
+            int a = 1;
             sequence.Add(a);
-            int b = 1;
+            int b = 2;
             sequence.Add(b);
             int c;
             while (a + b < n)
@@ -50,9 +62,7 @@ namespace CSP
         }
         public Node InsertToSolution (int index)
         {
-            Node node = new Node(goal);
-            domain.ForEach((item) => { node.domain.Add(item); });
-            solution.ForEach((item) => { node.solution.Add(item); });
+            Node node = new Node(this);
             node.solution.Add(node.domain[index]);
             node.domain.RemoveAt(index);
             return node;

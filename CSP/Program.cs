@@ -5,10 +5,11 @@ namespace CSP
     {
         static void Main(string[] args)
         {
-            //Graph hetman = new Graph(8, 0); //0 means that its hetmans problem
+            //Graph hetman = new Graph(7, 0); //0 means that its hetmans problem
             //hetman.HetmansForwardChecking();
-            Graph fibonacci = new Graph(3, 1);
-            fibonacci.FibonacciForwardChecking(0);
+            
+            Graph fibonacci = new Graph(59, 1);
+            fibonacci.FibonacciForwardChecking(1);
         }
     }
 }

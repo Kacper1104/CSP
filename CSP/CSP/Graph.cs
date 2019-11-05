@@ -253,7 +253,7 @@ namespace CSP
                 Console.WriteLine("\nSequence: " + btSolutions.Count);
             if (algorithm == "fc")
                 Console.WriteLine("\nSequence: " + fcSolutions.Count);
-            for (int i = 0; i < problemSize; i++)
+            for (int i = 0; i < node.solution.Count; i++)
             {
                 Console.Write(node.solution[i]+" ");
             }
