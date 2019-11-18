@@ -114,7 +114,7 @@ namespace CSP
                 if (isNewSolution || fcSolutions.Count == 0)
                 {
                     fcSolutions.Add(node);
-                    //PrintFibonacciScore(node, "fc");
+                    PrintFibonacciScore(node, "fc");
                 }
             }
         }
@@ -204,7 +204,7 @@ namespace CSP
                         if (isNewSolution || btSolutions.Count == 0)
                         {
                             btSolutions.Add(next);
-                            //PrintFibonacciScore(next, "bt");
+                            PrintFibonacciScore(next, "bt");
                         }
                     }
                 }

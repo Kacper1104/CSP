@@ -26,27 +26,32 @@ namespace CSP
             //    hetmans.HetmansBackTracking(hetmansSolution[i]);
             //    Console.WriteLine();
             //}
+
             //Fibonacci
             Graph fibonacci;
             int[] fibonacciTestData = new int[6] { 59, 617, 1447, 2137, 10177, 104009 };
-            //for problem size 617
-            Console.WriteLine("Fibonacci problem for N={0}", fibonacciTestData[1]);
-            fibonacci = new Graph(fibonacciTestData[1], 1);
-            Console.WriteLine();
-            Console.WriteLine("Forward checking with heuristic 0");
-            fibonacci.FibonacciForwardChecking(0, 5);
-            fibonacci = new Graph(fibonacciTestData[1], 1);
+            //for problem size 1447
+            Console.WriteLine("Fibonacci problem for N={0}", fibonacciTestData[4]);
+            
+            //fibonacci = new Graph(fibonacciTestData[2], 1);
+            //Console.WriteLine();
+            //Console.WriteLine("Forward checking with heuristic 0");
+            //fibonacci.FibonacciForwardChecking(0, 11);
+            
+            fibonacci = new Graph(fibonacciTestData[4], 1);
             Console.WriteLine();
             Console.WriteLine("Forward checking with heuristic 1");
-            fibonacci.FibonacciForwardChecking(1, 5);
-            fibonacci = new Graph(fibonacciTestData[1], 1);
-            Console.WriteLine();
-            Console.WriteLine("Backtracking with heuristic 0");
-            fibonacci.FibonacciBackTracking(0, 5);
-            fibonacci = new Graph(fibonacciTestData[1], 1);
+            fibonacci.FibonacciForwardChecking(1, 54);
+            
+            //fibonacci = new Graph(fibonacciTestData[2], 1);
+            //Console.WriteLine();
+            //Console.WriteLine("Backtracking with heuristic 0");
+            //fibonacci.FibonacciBackTracking(0, 7);
+            
+            fibonacci = new Graph(fibonacciTestData[4], 1);
             Console.WriteLine();
             Console.WriteLine("Backtracking with heuristic 1");
-            fibonacci.FibonacciBackTracking(1, 5);
+            fibonacci.FibonacciBackTracking(1, 54);
             Console.WriteLine();
         }
     }
